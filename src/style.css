@@ -61,6 +61,7 @@ body {
 
 .task-description {
   margin-left: 20px;
+  border: none;
 }
 
 .task-remove-button {
