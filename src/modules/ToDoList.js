@@ -1,4 +1,4 @@
-export class ToDoList {
+export default class ToDoList {
   constructor() {
     this.arr = [];
     this.storageKey = 'todolist';
@@ -49,7 +49,7 @@ export class ToDoList {
       const taskDescription = addElement('div', taskItem, 'task-description');
       taskDescription.innerHTML = task.description;
 
-      const taskRemoveButton = addElement('button', taskItem, 'task-remove-button',);
+      const taskRemoveButton = addElement('button', taskItem, 'task-remove-button');
       taskRemoveButton.innerHTML = 'X';
 
       taskRemoveButton.addEventListener('click', () => {

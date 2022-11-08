@@ -1,9 +1,7 @@
-// uncomment before deploy:
+import _ from 'lodash';
+import './style.css';
 
-// import _ from 'lodash';
-// import './style.css';
-
-import { ToDoList } from './modules/ToDoList.js';
+import ToDoList from './modules/ToDoList.js';
 
 const toDoAdd = document.querySelector('#add');
 
