@@ -1,7 +1,9 @@
+// uncomment before deploy:
+
 // import _ from 'lodash';
 // import './style.css';
 
-import { ToDoList } from '../modules/ToDoList.js';
+import { ToDoList } from './modules/ToDoList.js';
 
 const toDoAdd = document.querySelector('#add');
 
@@ -9,11 +11,10 @@ const myToDoList = new ToDoList();
 
 toDoAdd.addEventListener('change', () => {
   myToDoList.addTask();
-  myToDoList.saveDataToLocalStorage();
-  myToDoList.showTasks();
+  myToDoList.saveTasks();
 });
 
 window.onload = () => {
-  myToDoList.loadDataFromLocalStorage();
+  myToDoList.loadTasks();
   myToDoList.showTasks();
 };
