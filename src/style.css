@@ -1,0 +1,76 @@
+body {
+  max-width: 500px;
+  margin: 0 auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: lightgray;
+}
+
+.todo {
+  margin-top: 20px;
+  background-color: #fff;
+  box-shadow:
+    0 12px 15px -4px darkgrey,
+    0 0 0 0 white,
+    12px 0 15px -4px darkgrey,
+    -12px 0 15px -4px darkgrey;
+}
+
+.todo-header {
+  max-width: 500px;
+  margin: 0 auto;
+  height: 8vh;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid darkgrey;
+}
+
+.todo-header-descr {
+  color: #3e3e3e;
+  margin: 5px 0 0 10px;
+}
+
+.todo-header-refresh {
+  margin: 5px 10px 0 0;
+}
+
+.todo-add-form {
+  max-width: 500px;
+  margin: 0 auto;
+  height: 8vh;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid darkgrey;
+}
+
+.todo-add-form input {
+  border: none;
+  width: 100%;
+  margin-left: 10px;
+}
+
+.todo-list {
+  margin: 0 auto;
+}
+
+.task-item {
+  display: flex;
+  align-items: center;
+  height: 8vh;
+  border-bottom: 1px solid darkgrey;
+}
+
+.task-description {
+  margin-left: 20px;
+}
+
+.task-remove-button {
+  margin: 0 auto;
+  margin-right: 10px;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 8vh;
+}
