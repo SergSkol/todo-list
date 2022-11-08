@@ -31,6 +31,17 @@ export default class ToDoList {
     this.reindexTasks();
   }
 
+  clearCompletedTasks() {
+    this.arr.forEach((task) => {
+      if (task.completed) {
+        const taskItem = document.getElementById(task.id);
+        taskItem.remove();
+      }
+    });
+    this.arr = this.arr.filter((task) => !task.completed);
+    this.reindexTasks();
+  }
+
   editTask(id, newDescription) {
     this.arr.forEach((task) => {
       if (task.id === id) {
@@ -64,20 +75,53 @@ export default class ToDoList {
       taskItem.setAttribute('id', task.id);
       const taskCheckbox = addElement('input', taskItem, 'task-checkbox');
       taskCheckbox.setAttribute('type', 'checkbox');
+
+      if (task.completed) {
+        taskCheckbox.setAttribute('checked', 'checked');
+      }
+
       const taskDescription = addElement('input', taskItem, 'task-description');
       taskDescription.value = task.description;
+
+      if (task.completed) {
+        taskDescription.classList.add('line-through');
+      }
+
+      const taskDrag = addElement('a', taskItem, 'task-drag');
+      taskDrag.classList.add('fa-solid');
+      taskDrag.classList.add('fa-ellipsis-vertical');
+
+      const taskRemove = addElement('a', taskItem, 'task-remove');
+      taskRemove.classList.add('fa-solid');
+      taskRemove.classList.add('fa-trash');
+      taskRemove.classList.add('hide');
+
+      taskCheckbox.addEventListener('click', () => {
+        task.completed = !task.completed;
+        taskDescription.classList.toggle('line-through');
+        this.saveTasks();
+      });
+
+      taskDescription.addEventListener('click', () => {
+        taskDrag.classList.add('hide');
+        taskRemove.classList.remove('hide');
+        taskDescription.focus();
+        taskItem.classList.add('highlighted');
+        taskCheckbox.setAttribute('disabled', 'disabled');
+      });
 
       taskDescription.addEventListener('keypress', (event) => {
         if (event.key === 'Enter') {
           this.editTask(task.id, taskDescription.value);
           this.saveTasks();
+          taskDrag.classList.remove('hide');
+          taskRemove.classList.add('hide');
+          taskItem.classList.remove('highlighted');
+          taskCheckbox.removeAttribute('disabled');
         }
       });
 
-      const taskRemoveButton = addElement('button', taskItem, 'task-remove-button');
-      taskRemoveButton.innerHTML = 'X';
-
-      taskRemoveButton.addEventListener('click', () => {
+      taskRemove.addEventListener('click', () => {
         this.removeTask(task.id);
         this.saveTasks();
       });

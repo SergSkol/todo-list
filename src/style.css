@@ -30,7 +30,10 @@ body {
 }
 
 .todo-header-refresh {
-  margin: 5px 10px 0 0;
+  margin: 12px 10px 0 0;
+  color: #3e3e3e;
+  font-size: 20px;
+  text-decoration: none;
 }
 
 .todo-add-form {
@@ -62,11 +65,19 @@ body {
 .task-description {
   margin-left: 20px;
   border: none;
+  width: 80%;
 }
 
-.task-remove-button {
+.task-drag {
   margin: 0 auto;
   margin-right: 10px;
+  color: #3e3e3e;
+}
+
+.task-remove {
+  margin: 0 auto;
+  margin-right: 10px;
+  color: #3e3e3e;
 }
 
 .footer {
@@ -74,4 +85,16 @@ body {
   justify-content: center;
   align-items: center;
   height: 8vh;
+}
+
+.hide {
+  display: none;
+}
+
+.highlighted {
+  background-color: khaki;
+}
+
+.line-through {
+  text-decoration: line-through;
 }
