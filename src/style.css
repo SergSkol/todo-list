@@ -8,10 +8,10 @@ body {
 .todo {
   margin-top: 20px;
   background-color: #fff;
-  box-shadow: 
-    0 12px 15px -4px darkgrey, 
-    0 0 0 0 white, 
-    12px 0 15px -4px darkgrey, 
+  box-shadow:
+    0 12px 15px -4px darkgrey,
+    0 0 0 0 white,
+    12px 0 15px -4px darkgrey,
     -12px 0 15px -4px darkgrey;
 }
 
@@ -51,6 +51,7 @@ body {
 .todo-list {
   margin: 0 auto;
 }
+
 .task-item {
   display: flex;
   align-items: center;

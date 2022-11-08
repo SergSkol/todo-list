@@ -1,7 +1,8 @@
 import _ from 'lodash';
 import './style.css';
-
 import ToDoList from './modules/ToDoList.js';
+
+console.log(_);
 
 const toDoAdd = document.querySelector('#add');
 
