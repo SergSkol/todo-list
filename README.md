@@ -37,7 +37,7 @@ Contributions, issues, and feature requests are welcome!
 
 ### Go Live
 
-https://sergskol.github.io/todo-list/dist/
+https://sergskol.github.io/todo-list/dist
 
 ## Show your support
 
