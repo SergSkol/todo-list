@@ -62,6 +62,10 @@ body {
   border-bottom: 1px solid darkgrey;
 }
 
+.task-checkbox {
+  cursor: pointer;
+}
+
 .task-description {
   margin-left: 20px;
   border: none;
@@ -78,6 +82,7 @@ body {
   margin: 0 auto;
   margin-right: 10px;
   color: #3e3e3e;
+  cursor: pointer;
 }
 
 .footer {
@@ -85,6 +90,10 @@ body {
   justify-content: center;
   align-items: center;
   height: 8vh;
+}
+
+.todo-clear {
+  cursor: pointer;
 }
 
 .hide {
